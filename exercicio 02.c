@@ -40,39 +40,40 @@ imprime paula ganhou
 
 int main(){
 
-int n, m, vez=0;
+	int n, m, vez=0;
 
 
-printf(" Qual o valor de bolinhas recebido:");
-scanf("%d", &n);
+	printf(" Qual o valor de bolinhas recebido:");
+	scanf("%d", &n);
 
-printf("Me informe o valor de bolinhas que foi comido:");
-scanf("%d", &m);
+	printf("Me informe o valor de bolinhas que foi comido:");
+	scanf("%d", &m);
 
-if(vez == 0){
-	printf("Paula -  ");
-	vez == 1;
-}else{
-	printf("Carlos -  ");
-	vez == 0;
-}
+	while (n > 0){
+		if(vez == 0){
+			printf("Paula  -  ");
+			vez = 1;
+		}else{
+			printf("Carlos -  ");
+			vez = 0;
+		}
 
-n = n - m;
+		n = n - m;
 
-if(n < 0){
-	printf("0");
+		if(n < 0){
+			printf("0\n");
 
-}else{
-	printf("%d", n);
-}
+		}else{
+			printf("%d\n", n);
+		}
+	}
+	if(vez == 0)
+		printf("Carlos ganhou!\n");
 
-if(vez == 0)
-	printf("\nCarlos ganhou!\n");
-
-else
-	printf("Paula ganhou!\n");
-
-return  0 ;
+	else
+		printf("Paula ganhou!\n");
+	
+	return  0 ;
 
 }
 
